@@ -1,0 +1,9 @@
+\babel@toc {brazilian}{}\relax 
+\beamer@sectionintoc {1}{Pitch}{3}{0}{1}
+\beamer@sectionintoc {2}{Problematização}{4}{0}{2}
+\beamer@sectionintoc {3}{Estado da Arte}{5}{0}{3}
+\beamer@sectionintoc {4}{Objetivo}{6}{0}{4}
+\beamer@sectionintoc {5}{Arquitetura e Ferramental}{7}{0}{5}
+\beamer@sectionintoc {6}{Metodologia}{8}{0}{6}
+\beamer@sectionintoc {7}{Funcionalidades do Sistema}{9}{0}{7}
+\beamer@sectionintoc {8}{Benefícios Esperados e Conclusão}{10}{0}{8}

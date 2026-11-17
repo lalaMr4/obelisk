@@ -1,0 +1,526 @@
+:root {
+    --preto: #101010;
+    --preto-claro: #181818;
+    --cinza: #222222;
+    --dourado: #c7a566;
+    --dourado-claro: #e0c28b;
+    --branco: #f5f5f5;
+    --cinza-texto: #aaaaaa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--preto);
+    color: var(--branco);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* CABEÇALHO */
+
+.header {
+    width: 100%;
+    min-height: 90px;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: rgba(16, 16, 16, 0.96);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(199, 165, 102, 0.2);
+}
+
+.logo img,
+.footer-logo img {
+    width: 180px;
+    height: auto;
+    max-height: 65px;
+    object-fit: contain;
+    display: block;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header nav a {
+    color: var(--branco);
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.header nav a:hover {
+    color: var(--dourado);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--dourado);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 720px;
+    padding: 160px 10% 100px;
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(16, 16, 16, 0.85) 0%,
+            rgba(16, 16, 16, 0.55) 55%,
+            rgba(16, 16, 16, 0.15) 100%
+        ),
+        url("imagens/obelisk-banner.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.eyebrow {
+    color: var(--dourado);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.12;
+    margin: 25px 0;
+    font-weight: 700;
+}
+
+.hero p {
+    color: #dddddd;
+    font-size: 17px;
+    max-width: 520px;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--dourado);
+    color: #101010;
+    padding: 14px 26px;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--dourado-claro);
+    transform: translateY(-3px);
+}
+
+/* SEÇÕES */
+
+.section {
+    padding: 110px 8%;
+    background: var(--preto);
+}
+
+.section-dark {
+    background: var(--preto-claro);
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+.section-heading h2 {
+    font-size: clamp(30px, 4vw, 43px);
+    margin: 12px 0;
+}
+
+.section-heading h2 span {
+    color: var(--dourado);
+}
+
+.section-heading p {
+    color: var(--cinza-texto);
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    color: #cccccc;
+}
+
+.about-content p + p {
+    margin-top: 20px;
+}
+
+/* CONSULTORIA E DIFERENCIAIS */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.info-card {
+    padding: 35px 28px;
+    background: #202020;
+    border: 1px solid rgba(199, 165, 102, 0.2);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--dourado);
+}
+
+.info-card h3 {
+    color: var(--branco);
+    margin: 12px 0;
+    font-size: 21px;
+}
+
+.info-card p {
+    color: var(--cinza-texto);
+    font-size: 14px;
+}
+
+.card-number,
+.card-symbol {
+    color: var(--dourado);
+    font-size: 25px;
+}
+
+/* PROJETOS */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 350px));
+    justify-content: center;
+    gap: 30px;
+}
+
+.project-card {
+    width: 100%;
+    background: #1b1b1b;
+    border: 1px solid rgba(199, 165, 102, 0.25);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--dourado);
+}
+
+.project-image {
+    width: 100%;
+    height: 175px;
+    overflow: hidden;
+    background: #242424;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 24px;
+    text-align: left;
+}
+
+.project-category {
+    color: var(--dourado);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.project-info h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.project-info p {
+    color: var(--cinza-texto);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.project-tag {
+    color: var(--dourado-claro);
+    font-size: 12px;
+    border-top: 1px solid #39342a;
+    padding-top: 14px;
+    display: block;
+}
+
+/* EQUIPE */
+
+.team-placeholder {
+    max-width: 650px;
+    margin: auto;
+    padding: 50px 25px;
+    text-align: center;
+    background: #1b1b1b;
+    border: 1px solid rgba(199, 165, 102, 0.25);
+}
+
+.team-placeholder span {
+    color: var(--dourado);
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.team-placeholder h3 {
+    margin: 15px 0;
+    font-size: 23px;
+}
+
+.team-placeholder p {
+    color: var(--cinza-texto);
+    font-size: 14px;
+}
+
+/* CONTATO */
+
+.contact-link {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    color: var(--dourado);
+    font-size: 19px;
+    border-bottom: 1px solid var(--dourado);
+    padding-bottom: 5px;
+}
+
+/* RODAPÉ */
+
+.footer {
+    background: #090909;
+    padding: 45px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(199, 165, 102, 0.2);
+}
+
+.footer-logo img {
+    margin: 0 auto 15px;
+}
+
+.footer p {
+    color: var(--cinza-texto);
+    margin-bottom: 18px;
+}
+
+.footer span {
+    color: #777777;
+    font-size: 12px;
+}
+
+/* CELULAR */
+
+@media (max-width: 900px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .header nav {
+        gap: 13px;
+    }
+
+    .header nav a {
+        font-size: 11px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        min-height: 75px;
+    }
+
+    .logo img {
+        width: 145px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .header nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: #101010;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid var(--dourado);
+    }
+
+    .header nav.menu-aberto {
+        display: flex;
+    }
+
+    .header nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 650px;
+        padding: 140px 7% 80px;
+        background-position: 65% center;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .section {
+        padding: 75px 7%;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        max-width: 380px;
+        margin: auto;
+    }
+
+    .contact-link {
+        font-size: 16px;
+    }
+}
+
+
+/* EQUIPE OBELISK - PERSONAGENS 3D */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.team-card {
+    background: #1b1b1b;
+    border: 1px solid rgba(199, 165, 102, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    border-color: #c7a566;
+}
+
+.team-image {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+    background: #242424;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center bottom;
+    transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.04);
+}
+
+.team-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.team-role {
+    color: #c7a566;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.team-info h3 {
+    color: #fff;
+    font-size: 21px;
+    margin: 12px 0;
+}
+
+.team-info p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+    }
+
+    .team-image {
+        height: 380px;
+    }
+}
